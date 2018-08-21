@@ -1,6 +1,8 @@
 [environments]
   [environments.development]
     name = "example-go"
+	registry = "10.78.115.234/hus"
+	custom-tags = ["develop-pre"]
     namespace = "default"
     wait = true
     watch = false

@@ -1,4 +1,4 @@
-FROM golang
+FROM 10.78.115.234/env/golang:1.10-alpine3.8
 ENV PORT 8080
 EXPOSE 8080
 
