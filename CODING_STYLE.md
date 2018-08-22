@@ -1,4 +1,4 @@
-# Coding Practices & Conduct for DevOps
+# Chart Practices & Conduct for DevOps
 
 ## RBAC In Helm Chart with K8S
 
