@@ -23,3 +23,8 @@ We truncate at 63 chars because some Kubernetes name fields are limited to this 
     chart: {{ .Chart.Name }}
     version: {{ .Chart.Version }}
 {{- end }}
+
+{{- define "mychart.app" -}}
+app_name: {{ .Chart.Name }}
+app_version: "{{ .Chart.Version }}+{{ .Release.Time.Seconds }}"
+{{- end -}}

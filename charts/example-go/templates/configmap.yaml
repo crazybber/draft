@@ -3,6 +3,8 @@ kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-configmap
   {{- template "mychart.labels" . }}
+  labels:
+{{ include "mychart.app" . | indent 4 }}
 data:
   myvalue: "Hello World"
   {{- range $key, $val := .Values.favorite }}
@@ -17,3 +19,4 @@ data:
     {{- range tuple "small" "medium" "large" }}
     - {{ . }}
     {{- end }}
+{{ include "mychart.app" . | indent 2 }}
