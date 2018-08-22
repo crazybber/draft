@@ -20,4 +20,6 @@ We truncate at 63 chars because some Kubernetes name fields are limited to this 
   labels:
     generator: helm
     date: {{ now | htmlDate }}
+    chart: {{ .Chart.Name }}
+    version: {{ .Chart.Version }}
 {{- end }}
