@@ -6,6 +6,7 @@ metadata:
   labels:
 {{ include "mychart.app" . | indent 4 }}
 data:
+  salad: {{ .Values.global.salad }}
   myvalue: "Hello World"
   {{- range $key, $val := .Values.favorite }}
   {{ $key }}: {{ $val | quote }}

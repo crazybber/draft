@@ -4,3 +4,4 @@ metadata:
   name: {{ .Release.Name }}-cfgmap2
 data:
   dessert: {{ .Values.dessert }}
+  salad: {{ .Values.global.salad }}
