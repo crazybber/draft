@@ -28,3 +28,15 @@ We truncate at 63 chars because some Kubernetes name fields are limited to this 
 app_name: {{ .Chart.Name }}
 app_version: "{{ .Chart.Version }}+{{ .Release.Time.Seconds }}"
 {{- end -}}
+
+
+{{/*
+Create the name of the service account to use
+*/}}
+{{- define "mychart.serviceAccountName" -}}
+{{- if .Values.serviceAccount.create -}}
+    {{ default (include "mychart.fullname" .) .Values.serviceAccount.name }}
+{{- else -}}
+    {{ default "default" .Values.serviceAccount.name }}
+{{- end -}}
+{{- end -}}
