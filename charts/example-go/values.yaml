@@ -26,3 +26,5 @@ pizzaToppings:
   - cheese
   - peppers
   - onions
+mysubchart:
+  dessert: ice cream
