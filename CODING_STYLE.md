@@ -83,9 +83,10 @@ Repsitory字段的URL如果有可能，优先使用`https://` 前缀
 为每一行和每一个YAML文件做注释，如：
 
 ~~~YAML
-
-serverHost = example # serverHost is the host name for the webserver
-serverPort = 9191 # serverPort is the HTTP listener port for the webserver
+  # serverHost is the host name for the webserver
+serverHost: example
+ # serverPort is the HTTP listener port for the webserver
+serverPort: 8080
 
 {{- /*
 mychart.shortname provides a 6 char truncated version of the release name.
